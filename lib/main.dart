@@ -10,7 +10,7 @@ void main() async {
 
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform(
-      androidKey: 'enter android key here',
+      androidKey: 'AIzaSyCXU5f25S_SUeVv7cAzoeF373kHk4Hv2dE',
       iosKey: 'enter ios key here',
       webKey: 'enter web key here',
     ),
@@ -28,8 +28,12 @@ class MyApp extends StatelessWidget {
 
     return MaterialApp(
       theme: ThemeData(
-        colorSchemeSeed: Colors.deepPurple,
-        useMaterial3: true,
+        colorScheme: ColorScheme.fromSwatch(
+          brightness: Brightness.light,
+          primarySwatch: Colors.deepPurple,
+        ).copyWith(
+          secondary: Colors.grey,
+        ),
       ),
       home: ChatScreen(
         chatRepository: chatRepository,
