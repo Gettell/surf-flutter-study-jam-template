@@ -16,7 +16,6 @@ class ChatScreen extends StatefulWidget {
 }
 
 class _ChatScreenState extends State<ChatScreen> {
-
   final myNickController = TextEditingController();
   final myMessageController = TextEditingController();
 
@@ -64,9 +63,6 @@ class _ChatScreenState extends State<ChatScreen> {
           ),
         ),
         actions: [IconButton(onPressed: () {
-          setState(() {
-
-          });
         }, icon: Icon (Icons.refresh)),],
       ),
       body: Column(mainAxisAlignment: MainAxisAlignment.spaceBetween,
